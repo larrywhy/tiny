@@ -1,0 +1,19 @@
+<h1> Index Page of TDL </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th> todo </th>
+      <th> isdone </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tdls.each do |tdl| %>
+    <tr> 
+      <td> <%= tdl.todo %> </td>
+      <td> <%= tdl.isdone %> </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
