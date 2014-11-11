@@ -1,0 +1,24 @@
+<div class = "container">
+  <%= form_for @tdl , :url => tdls_path do |f| %>
+  <div class = "form-group">
+    <%= f.label :todo %>
+    <div class ="col-md-8">
+      <%= f.text_field :todo %>
+    </div>
+  </div>
+
+  <div class = "form-group">
+    <%= f.label :isdone %>
+    <div class ="col-md-8">
+      <%= f.check_box :isdone %>
+    </div>
+  </div>
+ 
+  <div class = "form-group">
+    <% #this will auto-send to create action %>
+    <%= f.submit "New",class: "btn btn-default btn-primary"  %>
+  </div>
+
+  <% end %>
+
+</div>
