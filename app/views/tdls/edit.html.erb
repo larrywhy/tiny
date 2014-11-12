@@ -1,0 +1,10 @@
+<%= form_for @tdl do |f| %>
+<%= f.label :todo , "todo" %>
+<%= f.text_field :todo %>
+
+<%= f.label :isdone , "isdone:" %>
+<%= f.check_box :isdone %>
+
+<%= f.submit "Update" %>
+<% end %>
+

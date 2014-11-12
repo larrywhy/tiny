@@ -16,6 +16,27 @@ class TdlsController < ApplicationController
        render :new
     end
   end
+  
+ # def show
+ #   @tdl = Tdl.find(params[:id])
+ # end
+ 
+  # edit & update action
+  def edit
+    @tdl = Tdl.find(params[:id])
+  end
+
+  def update
+    @tdl = Tdl.find(params[:id])
+    if @tdl.update(tdl_params)
+      redirect_to tdls_path
+    else
+      render :edit
+
+    end
+
+    
+  end
 
 private
 
