@@ -34,8 +34,12 @@ class TdlsController < ApplicationController
       render :edit
 
     end
+  end
 
-    
+  def destroy
+    @tdl = Tdl.find(params[:id])
+    @tdl.destroy
+    redirect_to tdls_path 
   end
 
 private
