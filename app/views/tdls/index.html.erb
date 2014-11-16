@@ -1,10 +1,8 @@
 <div class="container">
-<h1> Index Page of TDL </h1>
 <%= link_to new_tdl_path , :class => "navbar-btn btn btn-primary btn-sm" do %>
 <i class "fa fa-plis fa-sm"></i>New
 <% end %>
-
-<table class="table table-condensed">
+<table class="table"> 
   <thead>
     <tr>
       <th> todo </th>
@@ -15,7 +13,7 @@
   <tbody>
     <% @tdls.each do |tdl| %>
     <tr> 
-      <td> <%= tdl.todo %> </td>
+      <td style="word-break: break-all;"><%= tdl.todo %> </td>
       <td> <%= tdl.isdone %> </td>
       <td> <%= link_to 'Edit', edit_tdl_path(tdl) %>
       <td> <%= link_to 'Delete', tdl_path(tdl) , :method => :delete %>
