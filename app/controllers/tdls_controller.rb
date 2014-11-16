@@ -32,8 +32,18 @@ class TdlsController < ApplicationController
       redirect_to tdls_path
     else
       render :edit
-
     end
+  end
+
+  def isdone
+    @tdl = Tdl.find(params[:id])
+    if @tdl.isdone
+        @tdl.isdone = false
+    else
+        @tdl.isdone = true
+    end
+    @tdl.save
+    redirect_to tdls_path 
   end
 
   def destroy

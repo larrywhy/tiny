@@ -14,10 +14,9 @@
     <% @tdls.each do |tdl| %>
     <tr> 
       <td style="word-break: break-all;"><%= tdl.todo %> </td>
-      <td> <%= tdl.isdone %> </td>
+      <td> <%= link_to tdl.isdone.to_s ,isdone_tdl_path(tdl),method: :post %> </td>
       <td> <%= link_to 'Edit', edit_tdl_path(tdl) %>
-      <td> <%= link_to 'Delete', tdl_path(tdl) , :method => :delete %>
-      </td>
+      <td> <%= link_to 'Delete', tdl_path(tdl) , :method => :delete %></td>
     </tr>
     <% end %>
   </tbody>
