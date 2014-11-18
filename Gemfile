@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# social-share-button
+gem 'social-share-button'
 # Bootstrap 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
